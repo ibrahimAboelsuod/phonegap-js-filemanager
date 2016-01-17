@@ -18,7 +18,7 @@ Simple docs:
 			
 		2- Call scanDisk -Inside of deviceready if you are using cordova-
 		
-			fileManager.scanDisk(RootDirectory: String, typeList: array of strings, domain);
+			fileManager.scanDisk(RootDirectory: string, typeList: array of strings, domain: string);
 			Notce that:
 				-typeList is not case sensitive
 				-domain is an optional fix and might not be required depending on your code
@@ -26,10 +26,11 @@ Simple docs:
 				fm.scanDisk(cordova.file.externalRootDirectory, ["png","jpg","jpeg","gif"], "file:///storage/sdcard0");
 		
 		3- Read scaned files, this meathode is not exactly pretty but it will do for now (will be changed soon)
-			
-			var timerId=setInterval(function(){
-				if(fm.scanDiskFiles != null){
-					var files=fm.scanDiskFiles;
-					clearInterval(timerId);
-				}
-			}, 500);
+
+			Code:
+				var timerId=setInterval(function(){
+					if(fm.scanDiskFiles != null){
+						var files=fm.scanDiskFiles;
+						clearInterval(timerId);
+					}
+				}, 500);

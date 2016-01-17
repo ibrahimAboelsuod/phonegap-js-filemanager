@@ -1,9 +1,15 @@
 # phonegap-js-filemanager
+
 (WIP)This project is a simple file manager for a phonegap application I am building.
+
 It's originally ment for cordova based apps.
+
 But it should work just fine with any web based app sence it's based on the W3C File API.
+
 ........................................................
+
 Simple docs:
+
 	- To scan for a files of predefind type:
 		1- Create an object of the file manager class
 		

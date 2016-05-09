@@ -23,10 +23,13 @@ Simple docs:
 				-typeList is not case sensitive
 				-domain is an optional fix and might not be required depending on your code
 			Code:
-				fm.scanDisk(cordova.file.externalRootDirectory, ["png","jpg","jpeg","gif"], "file:///storage/sdcard0");
+				fm.scanDisk(cordova.file.externalRootDirectory, ["png","jpg","jpeg","gif"], "file:///storage/sdcard0", function(entries){
+					//use entries
+				});
 		
 		3- Read scaned files, this meathode is not exactly pretty but it will do for now (will be changed soon)
-
+			YOU DONT HAVE TO USE THIS METHODE ANYMORE, just use the callback in scanDisk function.
+		
 			Code:
 				var timerId=setInterval(function(){
 					if(fm.scanDiskFiles != null){
